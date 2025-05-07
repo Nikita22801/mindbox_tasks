@@ -44,3 +44,11 @@ class ShapeFactory:
         elif len(args) == 3:
             return Triangle(*args)
         raise ValueError("Неподдерживаемый тип фигуры")
+
+# Примеры использования:
+circle = ShapeFactory.create_shape(5)
+print(f"Площадь круга: {circle.area():.2f}")
+
+triangle = ShapeFactory.create_shape(3, 4, 5)
+print(f"Площадь треугольника: {triangle.area():.2f}")
+print(f"Прямоугольный треугольник: {triangle.is_right_angled()}")
